@@ -1,5 +1,5 @@
 def method():
-    file = open('input1.txt', 'r')
+    file = open("input1.txt", "r")
     sum_one = 0
     highest_sum = 0
     second_sum = 0
@@ -18,11 +18,11 @@ def method():
             sum_one = 0
         else:
             sum_one += int(line.split()[0])
-    print("Highest sum: "+ str(highest_sum))
-    print("Second highest: "+ str(second_sum))
-    print("Third highest: "+ str(third_sum))
+    print("Highest sum: " + str(highest_sum))
+    print("Second highest: " + str(second_sum))
+    print("Third highest: " + str(third_sum))
     print(highest_sum + second_sum + third_sum)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     method()
