@@ -1,5 +1,5 @@
 def method():
-    file = open("input3.txt", "r")
+    file = open("input/input3.txt", "r")
     sum1, sum2, iter, group = 0, 0, 1, []  # initial variable assignment
     for line in file:
         ### PART 1 ###

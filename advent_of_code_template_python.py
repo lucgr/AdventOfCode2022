@@ -1,5 +1,5 @@
 def method():
-    file = open("input1.txt", "r")
+    file = open("input/input1.txt", "r")
     for line in file:
         ...
 

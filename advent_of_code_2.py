@@ -1,5 +1,5 @@
 def method():
-    file = open("input2.txt", "r")
+    file = open("input/input2.txt", "r")
     sum1 = 0
     sum2 = 0
     for line in file:
