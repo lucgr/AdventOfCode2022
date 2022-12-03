@@ -1,9 +1,6 @@
 def method():
     file = open("input3.txt", "r")
-    sum1 = 0
-    sum2 = 0
-    iter = 1
-    group = []
+    sum1, sum2, iter, group = 0, 0, 1, [] # initial variable assignment
     for line in file:
         ### PART 1 ###
         compartment_1 = line[:len(line)//2]
@@ -13,22 +10,19 @@ def method():
 
         ### PART 2 ###
         group.append(line)
-        if (iter % 3 == 0):
+        if (iter % 3 == 0): # make groups of 3
             badge = find_common_item(bags=group)
             sum2 += find_value(char=badge)
             group = []
         iter += 1
-
-    print(sum1)
-    print(sum2)
+    print(f"Part 1 - Sum: {sum1}")
+    print(f"Part 2 - Sum: {sum2}")
 
 
 def find_value(char: str):
-    match char.islower():
-        case True:
-            return ord(char) - 96
-        case False:
-            return ord(char) - 38
+    if char.islower():
+        return ord(char) - 96 # lowercase, ascii-value minus 96 to start at 1
+    return ord(char) - 38 # uppercase, ascii-value minus 38 to start at 27
 
 def find_common_item(bags: list):
     bags = [bag[:-1] for bag in bags]
