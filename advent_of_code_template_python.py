@@ -3,5 +3,6 @@ def method():
     for line in file:
         ...
 
+
 if __name__ == "__main__":
     method()
